@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JPEDRAZAT3.GRADES.GRADESPAGES"
+             Title="Registro notas">
+    <StackLayout Padding="20">
+        <Label Text="Nombre: " FontSize="Large" />
+        <Picker x:Name="studentsPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Juan Pedraza</x:String>
+                    <x:String>Hector Asqui</x:String>
+                    <x:String>Kristin Gualpa</x:String>
+                    <x:String>David Caballero</x:String>
+                    <x:String>Diana Capa</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Nota Seguimiento 1:" FontSize="Large" />
+        <Entry x:Name="seguimiento1Entry" Keyboard="Numeric" />
+
+        <Label Text="Examen 1:" FontSize="Large" />
+        <Entry x:Name="examen1Entry" Keyboard="Numeric" />
+
+        <Label Text="Nota Seguimiento 2:" FontSize="Large" />
+        <Entry x:Name="seguimiento2Entry" Keyboard="Numeric" />
+
+        <Label Text="Examen 2:" FontSize="Large" />
+        <Entry x:Name="examen2Entry" Keyboard="Numeric" />
+
+        <Label Text="Fecha:" FontSize="Large" />
+        <DatePicker x:Name="datePicker" />
+
+        <Button Text="Calcular" Clicked="OnCalculateButtonClicked" />
+    </StackLayout>
+</ContentPage>
